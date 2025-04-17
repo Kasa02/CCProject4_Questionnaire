@@ -14,16 +14,19 @@ radios.forEach(radio => {
         followUp.style.display = "block";
         } else {
         followUp.style.display = "none";
+        localStorage.removeItem("after_anxiety"); 
         }
     });
 });
 
 nextButton.addEventListener("click", () => {
     let selected = null;
-    radios.forEach(r => { if (r.checked) selected = r.value; });
+    radios.forEach(r => {
+        if (r.checked) selected = r.value;
+    });
 
     if (!selected) {
-        alert("Please answer whether you feel anxious while playing.");
+        alert("Please select an answer.");
         return;
     }
 
@@ -31,6 +34,8 @@ nextButton.addEventListener("click", () => {
 
     if (selected === "yes") {
         localStorage.setItem("after_anxiety", slider.value);
+    } else {
+        localStorage.removeItem("after_anxiety"); 
     }
 
     window.location.href = "page5.html";

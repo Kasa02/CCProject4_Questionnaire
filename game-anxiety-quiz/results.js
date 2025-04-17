@@ -1,6 +1,6 @@
 function get(id) {
     return localStorage.getItem(id) || "N/A";
-  }
+}
   
     document.getElementById("plays").textContent = get("plays");
     document.getElementById("frequency").textContent = get("frequency");
@@ -11,24 +11,32 @@ function get(id) {
     document.getElementById("social_mode").textContent = get("social_mode");
     document.getElementById("purpose").textContent = get("purpose");
   
-    let summary = "";
-    const anxiousWhile = get("anxious_while");
-    const anxiety = parseInt(get("after_anxiety"));
-  
     const container = document.querySelector(".container");
+    const summaryEl = document.getElementById("summary");
   
-    if (isNaN(anxiety)) {
-        summary = "You skipped the anxiety level question.";
-        container.style.backgroundColor = "#fefefe";
-    } else if (anxiety <= 3) {
-        summary = "😌 You seem calm after gaming. It looks like gaming helps you relax! 👾";
-        container.style.backgroundColor = "#e3f2fd"; 
+    const anxiousWhile = localStorage.getItem("anxious_while");
+    const anxietyRaw = localStorage.getItem("after_anxiety");
+    const anxiety = anxietyRaw !== null ? parseInt(anxietyRaw) : null;
+    
+    let summary = "";
+  
+    if (anxiousWhile === "yes" && anxiety !== null) {
+        if (anxiety <= 3) {
+        summary = "😌 You feel relaxed after playing. Gaming might be a healthy coping tool for you!";
+        container.style.backgroundColor = "#e0f7fa";
     } else if (anxiety <= 7) {
-        summary = "😐 Your gaming-related anxiety is moderate. Try balancing playtime with breaks. 😴";
+        summary = "😐 Your post-gaming anxiety is moderate. Consider balancing intense sessions with breaks.";
         container.style.backgroundColor = "#fffde7"; 
     } else {
-        summary = "😣 Your anxiety level seems high after gaming. Consider reducing intense play or exploring relaxing games. 🎮";
+        summary = "😣 You reported high anxiety after gaming. Try reducing intense games or setting boundaries.";
         container.style.backgroundColor = "#ffebee"; 
+        }
+    } else if (anxiousWhile === "no") {
+        summary = "🧘 You don't feel anxious while playing. That's great! Keep up the healthy habits.";
+        container.style.backgroundColor = "#ede7f6"; 
+    } else {
+        summary = "🤔 We couldn't detect your anxiety level. Maybe you skipped that part.";
+        container.style.backgroundColor = "#f5f5f5";
     }
   
-    document.getElementById("summary").textContent = summary;
+    summaryEl.textContent = summary;
