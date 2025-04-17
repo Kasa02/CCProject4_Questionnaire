@@ -5,7 +5,7 @@
   - This questionnaire investigates how often people play games, why they play, what genres they enjoy, and how these factors might influence their emotional state—especially anxiety.
   - It aims to support self-awareness and prompt reflection on personal gaming habits.
 
-
+-------------
 2.  Questions Overview
 
   1. Do you play video games? (yes/no)
@@ -17,7 +17,7 @@
   7. Do you usually play alone or with others? (multiple choice)
   8. What is your main purpose for gaming? (multiple choice)
 
-
+-----------
 3. Testing Feedback
 
   - During testing, I discovered a logic bug between Q4 and Q5:
