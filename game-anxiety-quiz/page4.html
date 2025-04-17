@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Q4/Q5 - Gaming Anxiety</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>4. Do you feel anxious while playing? 🧐</h1>
+
+        <form>
+            <label><input type="radio" name="anxiousWhile" value="yes"> Yes</label><br>
+            <label><input type="radio" name="anxiousWhile" value="no"> No</label><br><br>
+        </form>
+
+        <div id="followUp" style="display:none;">
+            <h2>5. How anxious do you feel after gaming? (0 = calm, 10 = anxious)</h2>
+            <input type="range" id="anxietySlider" min="0" max="10" value="5">
+            <p>Your response: <span id="anxietyValue">5</span></p>
+        </div>
+
+        <button id="nextButton">Next</button>
+    </div>
+
+    <script src="script4.js"></script>
+</body>
+</html>

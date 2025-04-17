@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 - Game Genres</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>3. What genres do you usually play? 🃏</h1>
+
+        <form id="genreForm">
+            <label><input type="checkbox" name="genre" value="RPG"> RPG</label><br>
+            <label><input type="checkbox" name="genre" value="FPS"> FPS</label><br>
+            <label><input type="checkbox" name="genre" value="Casual"> Casual / Puzzle</label><br>
+            <label><input type="checkbox" name="genre" value="Simulation"> Simulation</label><br>
+            <label><input type="checkbox" name="genre" value="Music"> Rhythm / Music</label><br>
+            <label>
+                <input type="checkbox" name="genre" value="Other" id="otherCheckbox"> Other
+            </label>
+            <input type="text" id="otherText" placeholder="Please specify..." style="display:none; margin-top: 0.5em;" />
+            <br><br>
+        </form>
+        <button id="nextButton">Next</button>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>

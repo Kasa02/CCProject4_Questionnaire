@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(145deg, #e0f7fa, #f3e5f5);
+  margin: 0;
+  padding: 2em;
+  color: #333;
+}
+
+.container {
+  background-color: white;
+  padding: 2em 2.5em;
+  max-width: 650px;
+  margin: 2em auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  color: #5e35b1;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5em;
+  transform: scale(1.2);
+}
+
+select,
+textarea,
+input[type="range"] {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1em;
+  border: 2px solid #d1c4e9;
+  border-radius: 8px;
+  background-color: #f9f6ff;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="range"] {
+  accent-color: #7e57c2;
+  margin-top: 0.5em;
+}
+
+button {
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  padding: 0.7em 1.4em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(126, 87, 194, 0.2);
+}
+
+button:hover {
+  background-color: #5e35b1;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#anxietyValue {
+  font-weight: bold;
+  color: #3949ab;
+  font-size: 1.1em;
+}
